@@ -1,0 +1,17 @@
+h3 PROFILE
+
+.row
+  .col-xs-6
+    form(name='userForm', novalidate)
+      .form-group
+        label(for='email') Email
+        input.form-control(type='email', name='email', ng-model='user.email')
+      .form-group
+        label(for='avatar') Avatar
+        input.form-control(type='url', name='avatar', ng-model='user.avatar')
+      .form-group
+  .col-xs-6
+    img.img-response.img-thumbnail(ng-src='{{user.avatar}}')
+.row
+  .col-xs-12
+    button.btn.btn-default(ng-click='update(user)') Update

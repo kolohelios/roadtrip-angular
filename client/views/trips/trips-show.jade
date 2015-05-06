@@ -4,3 +4,9 @@ h3 {{trip.name}}
   .col-xs-6
     #map
   .col-xs-6
+    form(name='stopForm')
+      .form-group
+        label(for='name') Name
+        input.form-control(type='text' name='name' ng-model='stop.name')
+      .form-group
+        button.btn.button-primary(ng-click='create(stop)') Add Stop

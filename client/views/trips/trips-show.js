@@ -10,4 +10,11 @@ angular.module('roadtrip')
 
   var map = Map.create('#map', 48.9881, -122.7436, 12);
 
+  $scope.create = function(stop){
+    Map.geocode(stop.name, function(results, status){
+      console.info(results);
+      console.warn(status);
+    });
+  }
+
 });

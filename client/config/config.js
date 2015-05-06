@@ -16,5 +16,5 @@ angular.module('roadtrip')
   .state('trips', {url: '/trips', templateUrl: '/views/trips/trips.html', abstract: true})
   .state('trips.new', {url: '/new', templateUrl: '/views/trips/new.html', controller: 'TripsNewCtrl'})
   .state('trips.list', {url: '/', templateUrl: '/views/trips/list.html', controller: 'TripsListCtrl'})
-  .state('trips.show', {url: '/{tripId}', templateUrl: '/views/users/show.html', controller: 'TripsShowCtrl'});
+  .state('trips.show', {url: '/{tripId}', templateUrl: '/views/trips/show.html', controller: 'TripsShowCtrl'});
 });

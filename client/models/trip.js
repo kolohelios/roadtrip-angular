@@ -9,8 +9,6 @@ angular.module('roadtrip')
     this.departure = obj.departure;
   }
 
-
-
   Trip.find = function(){
     return $http.get(nodeUrl + '/trips');
   };
@@ -25,6 +23,14 @@ angular.module('roadtrip')
 
   Trip.prototype.addStop = function(stop){
     return $http.post(nodeUrl + '/trips/' + this._id + '/stops', stop);
+  };
+
+  Trip.destroy = function(tripId){
+    return $http.delete(nodeUrl + '/trips/' + tripId);
+  };
+
+  Trip.removeStop = function(stop, tripId){
+    return $http.delete(nodeUrl + '/trips/' + tripId + '/stops/' + stop)
   };
 
   return Trip;

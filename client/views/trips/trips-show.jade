@@ -10,3 +10,19 @@ h3 {{trip.name}}
         input.form-control(type='text' name='name' ng-model='stop.name')
       .form-group
         button.btn.button-primary(ng-click='create(stop)') Add Stop
+        .row
+      .col-xs-12
+        table.table.table.striped
+          thead
+            tr
+              th Delete
+              th Name
+              th Lat
+              th Lng
+          tbody
+            tr(ng-repeat='stop in stops')
+              td: button.btn.btn-danger.btn-xs(ng-click='remove(stop._id, trip._id)'): i.fa.fa-trash
+              td {{stop.name}}
+              td {{stop.lat}}
+              td {{stop.lng}}
+            

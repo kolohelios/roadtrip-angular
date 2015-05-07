@@ -2,4 +2,4 @@
 
 angular.module('roadtrip')
 .constant('firebaseUrl', 'https://roadtrip-kolohelios.firebaseio.com/')
-.constant('nodeUrl', 'http://localhost:8000');
+.constant('nodeUrl', 'https://pure-fjord-6223.herokuapp.com/');
